@@ -8,6 +8,7 @@ const React = require('react')
 const PropTypes = require('prop-types')
 const uuidv1 = require('uuid/v1')
 const Tab = require('./Tab')
+const styles = require('./styles/index')
 
 /**
  * Define component

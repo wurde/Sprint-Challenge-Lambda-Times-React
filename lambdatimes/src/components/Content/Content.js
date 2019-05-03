@@ -7,6 +7,7 @@
 const React = require('react')
 const Tabs = require('./Tabs')
 const Cards = require('./Cards')
+const styles = require('./styles/index')
 const data = require('../../data')
 
 /**

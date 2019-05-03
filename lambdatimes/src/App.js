@@ -19,7 +19,7 @@ require('./App.scss')
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="jsx-App">
       <components.TopBar />
       <components.Header />
       <components.Content />

@@ -5,6 +5,7 @@
  */
 
 const React = require('react')
+const styles = require('./styles/index')
 const data = require('../../data')
 
 /**
