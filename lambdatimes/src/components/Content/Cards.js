@@ -5,13 +5,9 @@
  */
 
 const React = require('react')
+const PropTypes = require('prop-types')
+const uuidv1 = require('uuid/v1')
 const Card = require('./Card')
-
-/**
- * Constants
- */
-
-const Component = React.Component
 
 /**
  * Define component
@@ -20,12 +16,18 @@ const Component = React.Component
 const Cards = props => {
   return (
     <div className="cards-container">
-      {props.cards.map(card => <Card {...card} />)}
+      {props.cards.map(card => <Card key={uuidv1()} {...card} />)}
     </div>
   )
 }
 
-// Make sure you include prop types for all of your incoming props
+/**
+ * Validate prop types
+ */
+
+Cards.propTypes = {
+  cards: PropTypes.array.isRequired,
+}
 
 /**
  * Export component

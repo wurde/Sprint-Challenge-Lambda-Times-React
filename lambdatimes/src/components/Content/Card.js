@@ -5,6 +5,7 @@
  */
 
 const React = require('react')
+const PropTypes = require('prop-types')
 
 /**
  * Define component
@@ -24,7 +25,15 @@ const Card = props => {
   )
 }
 
-// Make sure to include PropTypes.
+/**
+ * Validate prop types
+ */
+
+Card.propTypes = {
+  headline: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+}
 
 /**
  * Export component

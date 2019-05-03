@@ -5,6 +5,7 @@
  */
 
 const React = require('react')
+const PropTypes = require('prop-types')
 const uuidv1 = require('uuid/v1')
 const Tab = require('./Tab')
 
@@ -23,7 +24,15 @@ const Tabs = props => {
   )
 }
 
-// Make sure to use PropTypes to validate your types!
+/**
+ * Validate prop types
+ */
+
+Tabs.propTypes = {
+  tabs: PropTypes.array.isRequired,
+  selectedTab: PropTypes.string.isRequired,
+  selectTabHandler: PropTypes.func.isRequired,
+}
 
 /**
  * Export component

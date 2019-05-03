@@ -5,6 +5,7 @@
  */
 
 const React = require('react')
+const PropTypes = require('prop-types')
 
 /**
  * Define component
@@ -19,7 +20,15 @@ const Tab = props => {
   )
 }
 
-// Make sure you include PropTypes on your props.
+/**
+ * Validate prop types
+ */
+
+Tab.propTypes = {
+  tab: PropTypes.string.isRequired,
+  selectedTab: PropTypes.string.isRequired,
+  selectTabHandler: PropTypes.func.isRequired,
+}
 
 /**
  * Export component
