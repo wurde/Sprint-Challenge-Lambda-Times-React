@@ -13,11 +13,11 @@ const styles = require('./styles/index')
 
 const Header = () => {
   return (
-    <div className="header">
-      <span className="date">SMARCH 32, 2018</span>
+    <styles.HeaderStyle>
+      <styles.HeaderDateStyle>SMARCH 32, 2018</styles.HeaderDateStyle>
       <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
-    </div>
+      <styles.HeaderTempStyle>98°</styles.HeaderTempStyle>
+    </styles.HeaderStyle>
   )
 }
 
