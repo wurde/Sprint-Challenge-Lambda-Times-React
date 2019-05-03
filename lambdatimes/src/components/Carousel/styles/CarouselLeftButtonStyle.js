@@ -32,6 +32,7 @@ let CarouselLeftButtonStyle = styled.div(() => `
   top: 50%;
   left: 25px;
   transform: translate(0, -50%);
+  user-select: none;
 
   &:hover {
     color: #333;

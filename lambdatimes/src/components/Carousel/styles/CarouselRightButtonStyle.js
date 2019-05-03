@@ -32,6 +32,7 @@ let CarouselRightButtonStyle = styled.div(() => `
   top: 50%;
   right: 25px;
   transform: translate(0, -50%);
+  user-select: none;
 
   &:hover {
     color: #333;
