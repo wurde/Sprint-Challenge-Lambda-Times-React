@@ -1,9 +1,25 @@
-import React, { Component } from 'react';
-import { carouselData } from '../../data'
-// Complete this Carousel 
-export default class Carousel extends Component {
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+const { carouselData } = require('../../data')
+
+/**
+ * Constants
+ */
+
+const Component = React.Component
+
+/**
+ * Define component
+ */
+
+class Carousel extends Component {
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
 
     }
@@ -23,7 +39,7 @@ export default class Carousel extends Component {
   selectedImage = () => {
     return <img src={} style={{display: 'block'}} />
   }
-  
+
   render(){
     return (
       <div className="carousel">
@@ -33,3 +49,9 @@ export default class Carousel extends Component {
     )
   }
 }
+
+/**
+ * Export component
+ */
+
+module.exports = Carousel

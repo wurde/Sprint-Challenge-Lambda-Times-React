@@ -1,16 +1,34 @@
-import React, { Component } from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+const components = require('./components/index')
+
+/**
+ * Import component styles
+ */
+
+require('./App.scss')
+
+/**
+ * Define component
+ */
 
 const App = () => {
   return (
     <div className="App">
-      <TopBar />
-      <Header />
-      <Content />
+      <components.TopBar />
+      <components.Header />
+      <components.Content />
     </div>
-  );
+  )
 }
 
-export default App;
+/**
+ * Export component
+ */
+
+module.exports = App

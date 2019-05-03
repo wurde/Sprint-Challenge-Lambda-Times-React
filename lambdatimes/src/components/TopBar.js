@@ -1,7 +1,17 @@
-import React from 'react';
+'use strict'
 
-// Refactor this component to use styled components and not classNames. 
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+
+// Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
+
+/**
+ * Define component
+ */
 
 const TopBar = () => {
   return (
@@ -21,4 +31,8 @@ const TopBar = () => {
   )
 }
 
-export default TopBar;
+/**
+ * Export component
+ */
+
+module.exports = TopBar

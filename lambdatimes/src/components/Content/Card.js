@@ -1,4 +1,14 @@
-import React from 'react';
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+
+/**
+ * Define component
+ */
 
 const Card = props => {
   return (
@@ -11,9 +21,13 @@ const Card = props => {
         <span>By {/* author goes here */}</span>
       </div>
     </div>
-  );
-};
+  )
+}
 
 // Make sure to include PropTypes.
 
-export default Card;
+/**
+ * Export component
+ */
+
+module.exports = Card
