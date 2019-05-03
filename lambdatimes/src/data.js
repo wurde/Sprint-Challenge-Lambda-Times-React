@@ -1,9 +1,12 @@
-/* Do not change anything in this file until you are completed with the assignment 
-   and have moved onto the stretch goals. */
+'use strict'
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+/**
+ * Define data
+ */
 
-export const cardData = [
+const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap']
+
+const cardData = [
   {
     headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
     tab: "javascript",
@@ -96,9 +99,19 @@ export const cardData = [
   }
 ]
 
-export const carouselData = [
+const carouselData = [
   "./assets/carousel/mountains.jpeg",
   "./assets/carousel/computer.jpeg",
   "./assets/carousel/trees.jpeg",
   "./assets/carousel/turntable.jpeg"
 ]
+
+/**
+ * Export data
+ */
+
+module.exports = {
+  tabData: tabData,
+  cardData: cardData,
+  carouselData: carouselData,
+}

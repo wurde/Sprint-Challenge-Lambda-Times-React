@@ -5,13 +5,14 @@
  */
 
 const React = require('react')
-const { carouselData } = require('../../data')
+const data = require('../../data')
 
 /**
  * Constants
  */
 
 const Component = React.Component
+const carouselData = data.carouselData
 
 /**
  * Define component

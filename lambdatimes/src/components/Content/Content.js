@@ -7,15 +7,15 @@
 const React = require('react')
 const Tabs = require('./Tabs')
 const Cards = require('./Cards')
-
-// Importing our tab and card data. No need to change anything here.
-const { tabData, cardData } = require('../../data')
+const data = require('../../data')
 
 /**
  * Constants
  */
 
 const Component = React.Component
+const tabData = data.tabData
+const cardData = data.cardData
 
 /**
  * Define component
@@ -32,11 +32,15 @@ class Content extends Component {
   }
 
   componentDidMount() {
-    // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState({
+      tabs: tabData,
+      cards: cardData
+    })
   }
 
   changeSelected = tab => {
-    // this function should take in the tab and update the state with the new tab.
+    console.log(`Tab ${tab} ${tab.constructor}`)
+    // TODO this function should take in the tab and update the state with the new tab.
   }
 
   filterCards = () => {
@@ -58,12 +62,7 @@ class Content extends Component {
   render() {
     return (
       <div className="content-container">
-        {/*
-          Add 2 props to the Tabs component,
-          `selectedTab` that includes the currently selected tab
-          and `selectTabHandler` that includes the function to change the selected tab
-        */}
-        <Tabs tabs={this.state.tabs} />
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} />
         <Cards cards={this.filterCards()} />
       </div>
     )
