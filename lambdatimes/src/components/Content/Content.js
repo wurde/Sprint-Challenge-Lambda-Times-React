@@ -39,8 +39,7 @@ class Content extends Component {
   }
 
   changeSelected = tab => {
-    console.log(`Tab ${tab} ${tab.constructor}`)
-    // TODO this function should take in the tab and update the state with the new tab.
+    this.setState({ selected: tab })
   }
 
   filterCards = () => {
