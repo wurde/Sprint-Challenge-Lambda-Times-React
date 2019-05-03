@@ -16,19 +16,22 @@ const styled = styled_components.default
  * Define style component
  */
 
-let TopBarStyle = styled.div(() => `
-  width: 100%;
+let TopBarContainerRightStyle = styled.div(() => `
   display: flex;
-  justify-content: center;
-  align-items: none;
+  justify-content: flex-end;
+  align-items: center;
   flex-direction: row;
-  position: fixed;
-  height: 44px;
-  background-color: #333;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+
+  span {
+    cursor: pointer;
+  }
 `)
 
 /**
  * Export style component
  */
 
-module.exports = TopBarStyle
+module.exports = TopBarContainerRightStyle

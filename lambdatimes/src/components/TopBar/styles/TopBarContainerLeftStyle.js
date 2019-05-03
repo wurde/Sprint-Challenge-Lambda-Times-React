@@ -16,19 +16,23 @@ const styled = styled_components.default
  * Define style component
  */
 
-let TopBarStyle = styled.div(() => `
-  width: 100%;
+let TopBarContainerLeftStyle = styled.div(() => `
   display: flex;
-  justify-content: center;
-  align-items: none;
+  justify-content: none;
+  align-items: center;
   flex-direction: row;
-  position: fixed;
-  height: 44px;
-  background-color: #333;
+  flex: 1;
+  font-size: 11px;
+
+  span {
+    cursor: pointer;
+    margin-right: 25%;
+    font-weight: bold;
+  }
 `)
 
 /**
  * Export style component
  */
 
-module.exports = TopBarStyle
+module.exports = TopBarContainerLeftStyle

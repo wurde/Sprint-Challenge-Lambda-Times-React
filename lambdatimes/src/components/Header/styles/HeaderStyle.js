@@ -1,3 +1,30 @@
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const styled_components = require('styled-components')
+
+/**
+ * Constants
+ */
+
+const styled = styled_components.default
+
+/**
+ * Define style component
+ */
+
+let HeaderStyle = styled.div(() => `
+`)
+
+/**
+ * Export style component
+ */
+
+module.exports = HeaderStyle
+
 // .header {
 //   display: flex;
 //   justify-content: space-between;

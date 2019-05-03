@@ -1,3 +1,30 @@
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const styled_components = require('styled-components')
+
+/**
+ * Constants
+ */
+
+const styled = styled_components.default
+
+/**
+ * Define style component
+ */
+
+let TabsStyle = styled.div(() => `
+`)
+
+/**
+ * Export style component
+ */
+
+module.exports = TabsStyle
+
 // .tabs {
 //   border-bottom: 1px solid lightgrey;
 //   display: flex;

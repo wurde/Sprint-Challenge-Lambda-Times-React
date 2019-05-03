@@ -16,19 +16,23 @@ const styled = styled_components.default
  * Define style component
  */
 
-let TopBarStyle = styled.div(() => `
+let TopBarContainerStyle = styled.div(() => `
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: none;
   align-items: none;
   flex-direction: row;
-  position: fixed;
-  height: 44px;
-  background-color: #333;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 0 10px;
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+  }
 `)
 
 /**
  * Export style component
  */
 
-module.exports = TopBarStyle
+module.exports = TopBarContainerStyle
