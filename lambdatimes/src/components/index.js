@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  TopBar: require('./TopBar'),
-  Header: require('./Header'),
+  TopBar: require('./TopBar/TopBar'),
+  Header: require('./Header/Header'),
   Content: require('./Content/Content'),
 }
