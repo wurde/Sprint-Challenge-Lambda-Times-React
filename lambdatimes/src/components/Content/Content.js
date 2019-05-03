@@ -7,6 +7,7 @@
 const React = require('react')
 const Tabs = require('./Tabs')
 const Cards = require('./Cards')
+const Carousel = require('../Carousel/Carousel')
 const styles = require('./styles/index')
 const data = require('../../data')
 
@@ -55,6 +56,7 @@ class Content extends Component {
     return (
       <styles.ContentStyle>
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </styles.ContentStyle>
     )
