@@ -16,14 +16,13 @@ const styled = styled_components.default
  * Define style component
  */
 
-let ContentStyle = styled.div(() => `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+let CardHeadlineStyle = styled.div(() => `
+  font-size: 25px;
+  font-family: Didot, serif;
 `)
 
 /**
  * Export style component
  */
 
-module.exports = ContentStyle
+module.exports = CardHeadlineStyle

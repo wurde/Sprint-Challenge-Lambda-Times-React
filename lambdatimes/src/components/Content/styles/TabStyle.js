@@ -16,18 +16,22 @@ const styled = styled_components.default
  * Define style component
  */
 
-let TabsStyle = styled.div(() => `
-  border-bottom: 1px solid lightgrey;
+let TabStyle = styled.span(() => `
   display: flex;
-  justify-content: center;
+  justify-content: none;
   align-items: center;
   flex-direction: row;
-  width: 100%;
-  height: 47px;
-  background-color: #fff;
+  color: #fff;
+  background-color: #333;
+  margin: 0 5px;
+  padding: 2px 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: bold;
 
-  @media (min-width: 1280px) {
-    width: 1280px;
+  &:hover {
+    text-decoration: underline;
   }
 `)
 
@@ -35,4 +39,4 @@ let TabsStyle = styled.div(() => `
  * Export style component
  */
 
-module.exports = TabsStyle
+module.exports = TabStyle

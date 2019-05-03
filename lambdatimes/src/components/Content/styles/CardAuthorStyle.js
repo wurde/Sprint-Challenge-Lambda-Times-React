@@ -16,18 +16,19 @@ const styled = styled_components.default
  * Define style component
  */
 
-let TabsStyle = styled.div(() => `
-  border-bottom: 1px solid lightgrey;
+let CardAuthorStyle = styled.div(() => `
   display: flex;
-  justify-content: center;
+  justify-content: none;
   align-items: center;
   flex-direction: row;
-  width: 100%;
-  height: 47px;
-  background-color: #fff;
+  margin-top: 15px;
 
-  @media (min-width: 1280px) {
-    width: 1280px;
+
+  span {
+    padding-left: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
   }
 `)
 
@@ -35,4 +36,4 @@ let TabsStyle = styled.div(() => `
  * Export style component
  */
 
-module.exports = TabsStyle
+module.exports = CardAuthorStyle

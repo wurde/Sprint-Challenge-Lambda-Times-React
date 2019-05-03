@@ -13,12 +13,19 @@ const styles = require('./styles/index')
  */
 
 const Tab = props => {
-  return (
-    <div className={(props.tab === props.selectedTab) ? 'tab active-tab' : 'tab'}
-         onClick={() => { props.selectTabHandler(props.tab) }}>
-      {props.tab.toUpperCase()}
-    </div>
-  )
+  if (props.tab === props.selectedTab) {
+    return (
+      <styles.TabActiveStyle onClick={() => { props.selectTabHandler(props.tab) }}>
+        {props.tab.toUpperCase()}
+      </styles.TabActiveStyle>
+    )
+  } else {
+    return (
+      <styles.TabStyle onClick={() => { props.selectTabHandler(props.tab) }}>
+        {props.tab.toUpperCase()}
+      </styles.TabStyle>
+    )
+  }
 }
 
 /**

@@ -16,12 +16,12 @@ const styles = require('./styles/index')
 
 const Tabs = props => {
   return (
-    <div className="tabs">
-      <div className="topics">
-        <span className="title">TRENDING TOPICS:</span>
+    <styles.TabsStyle>
+      <styles.TabsTopicsStyle>
+        <styles.TabsTopcsTitleStyle>TRENDING TOPICS:</styles.TabsTopcsTitleStyle>
         {props.tabs.map(tab => <Tab key={uuidv1()} tab={tab} selectedTab={props.selectedTab} selectTabHandler={props.selectTabHandler} />)}
-      </div>
-    </div>
+      </styles.TabsTopicsStyle>
+    </styles.TabsStyle>
   )
 }
 

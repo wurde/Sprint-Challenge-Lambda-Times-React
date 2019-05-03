@@ -16,14 +16,14 @@ const styled = styled_components.default
  * Define style component
  */
 
-let ContentStyle = styled.div(() => `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+let TabActiveStyle = styled.span(() => `
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
 `)
 
 /**
  * Export style component
  */
 
-module.exports = ContentStyle
+module.exports = TabActiveStyle

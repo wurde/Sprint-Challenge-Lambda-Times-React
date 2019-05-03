@@ -16,9 +16,9 @@ const styles = require('./styles/index')
 
 const Cards = props => {
   return (
-    <div className="cards-container">
+    <styles.CardsContainerStyle>
       {props.cards.map(card => <Card key={uuidv1()} {...card} />)}
-    </div>
+    </styles.CardsContainerStyle>
   )
 }
 

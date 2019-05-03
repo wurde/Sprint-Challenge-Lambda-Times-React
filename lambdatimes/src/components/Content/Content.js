@@ -53,10 +53,10 @@ class Content extends Component {
 
   render() {
     return (
-      <div className="content-container">
+      <styles.ContentStyle>
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} />
         <Cards cards={this.filterCards()} />
-      </div>
+      </styles.ContentStyle>
     )
   }
 }

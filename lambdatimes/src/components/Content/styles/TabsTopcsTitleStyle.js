@@ -16,14 +16,14 @@ const styled = styled_components.default
  * Define style component
  */
 
-let ContentStyle = styled.div(() => `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+let TabsTopcsTitleStyle = styled.span(() => `
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
 `)
 
 /**
  * Export style component
  */
 
-module.exports = ContentStyle
+module.exports = TabsTopcsTitleStyle

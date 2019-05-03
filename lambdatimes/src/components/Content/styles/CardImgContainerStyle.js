@@ -16,14 +16,18 @@ const styled = styled_components.default
  * Define style component
  */
 
-let ContentStyle = styled.div(() => `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+let CardImgContainerStyle = styled.div(() => `
+  padding-right: 10px;
+  border-right: 1px solid lightgrey;
+  height: 40px;
+
+  img {
+    width: 40px;
+  }
 `)
 
 /**
  * Export style component
  */
 
-module.exports = ContentStyle
+module.exports = CardImgContainerStyle

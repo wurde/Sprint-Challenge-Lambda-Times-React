@@ -14,15 +14,15 @@ const styles = require('./styles/index')
 
 const Card = props => {
   return (
-    <div className="card">
-      <div className="headline">{props.headline}</div>
-      <div className="author">
-        <div className="img-container">
+    <styles.CardStyle>
+      <styles.CardHeadlineStyle>{props.headline}</styles.CardHeadlineStyle>
+      <styles.CardAuthorStyle>
+        <styles.CardImgContainerStyle>
           <img src={props.img} />
-        </div>
+        </styles.CardImgContainerStyle>
         <span>By {props.author}</span>
-      </div>
-    </div>
+      </styles.CardAuthorStyle>
+    </styles.CardStyle>
   )
 }
 
