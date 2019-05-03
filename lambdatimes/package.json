@@ -5,10 +5,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "ava **/*_test.js --verbose",
     "eject": "react-scripts eject",
     "pretest": "NODE_ENV=test PORT=8888 node index.js &",
-    "test": "ava **/*_test.js --verbose",
     "posttest": "pkill --signal SIGINT lambda-times"
   },
   "dependencies": {
@@ -20,5 +19,17 @@
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.0",
     "styled-components": "^4.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
