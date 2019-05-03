@@ -1,22 +1,45 @@
-import React from 'react';
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+const PropTypes = require('prop-types')
+const styles = require('./styles/index')
+
+/**
+ * Define component
+ */
 
 const Tab = props => {
-  /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
-      if they match, the className should be: 'tab active-tab', 
-      if it is not it should just be 'tab'*/
-  return (
-    <div
-      className={''}
-      onClick={() => {
-        /* Replace this dummy click handler function with your selectTabHandler function from props 
-         you'll need to pass the `tab` in as an argument to this handler. */
-      }}
-    >
-      {props.tab.toUpperCase()}
-    </div>
-  );
-};
+  if (props.tab === props.selectedTab) {
+    return (
+      <styles.TabActiveStyle onClick={() => { props.selectTabHandler(props.tab) }}>
+        {props.tab.toUpperCase()}
+      </styles.TabActiveStyle>
+    )
+  } else {
+    return (
+      <styles.TabStyle onClick={() => { props.selectTabHandler(props.tab) }}>
+        {props.tab.toUpperCase()}
+      </styles.TabStyle>
+    )
+  }
+}
 
-// Make sure you include PropTypes on your props.
+/**
+ * Validate prop types
+ */
 
-export default Tab;
+Tab.propTypes = {
+  tab: PropTypes.string.isRequired,
+  selectedTab: PropTypes.string.isRequired,
+  selectTabHandler: PropTypes.func.isRequired,
+}
+
+/**
+ * Export component
+ */
+
+module.exports = Tab

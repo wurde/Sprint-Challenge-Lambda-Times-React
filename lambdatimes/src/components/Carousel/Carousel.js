@@ -1,35 +1,72 @@
-import React, { Component } from 'react';
-import { carouselData } from '../../data'
-// Complete this Carousel 
-export default class Carousel extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
+'use strict'
 
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+const styles = require('./styles/index')
+const data = require('../../data')
+
+/**
+ * Constants
+ */
+
+const Component = React.Component
+const carouselData = data.carouselData
+
+/**
+ * Define component
+ */
+
+class Carousel extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      slides: [],
+      selected: 0
     }
   }
-  componentDidMount(){
 
+  componentDidMount() {
+    this.setState({
+      slides: carouselData
+    })
   }
 
   leftClick = () => {
-
+    if (this.state.selected <= 0) {
+      this.setState({ selected: this.state.slides.length - 1 })
+    } else {
+      this.setState({ selected: this.state.selected - 1 })
+    }
   }
 
   rightClick = () => {
-
+    if (this.state.selected >= this.state.slides.length - 1) {
+      this.setState({ selected: 0 })
+    } else {
+      this.setState({ selected: this.state.selected + 1 })
+    }
   }
 
   selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+    return <img src={this.state.slides[this.state.selected]} style={{display: 'block'}} />
   }
-  
-  render(){
+
+  render() {
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
+      <styles.CarouselStyle>
+        <styles.CarouselLeftButtonStyle onClick={this.leftClick}>{"<"}</styles.CarouselLeftButtonStyle>
+        <styles.CarouselRightButtonStyle onClick={this.rightClick}>{">"}</styles.CarouselRightButtonStyle>
+        {this.selectedImage()}
+      </styles.CarouselStyle>
     )
   }
 }
+
+/**
+ * Export component
+ */
+
+module.exports = Carousel

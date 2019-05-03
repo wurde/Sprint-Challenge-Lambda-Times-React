@@ -1,19 +1,43 @@
-import React from 'react';
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+const PropTypes = require('prop-types')
+const styles = require('./styles/index')
+
+/**
+ * Define component
+ */
 
 const Card = props => {
   return (
-    <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
-      <div className="author">
-        <div className="img-container">
-          <img src={'' /* image source goes here */} />
-        </div>
-        <span>By {/* author goes here */}</span>
-      </div>
-    </div>
-  );
-};
+    <styles.CardStyle>
+      <styles.CardHeadlineStyle>{props.headline}</styles.CardHeadlineStyle>
+      <styles.CardAuthorStyle>
+        <styles.CardImgContainerStyle>
+          <img src={props.img} />
+        </styles.CardImgContainerStyle>
+        <span>By {props.author}</span>
+      </styles.CardAuthorStyle>
+    </styles.CardStyle>
+  )
+}
 
-// Make sure to include PropTypes.
+/**
+ * Validate prop types
+ */
 
-export default Card;
+Card.propTypes = {
+  headline: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+}
+
+/**
+ * Export component
+ */
+
+module.exports = Card

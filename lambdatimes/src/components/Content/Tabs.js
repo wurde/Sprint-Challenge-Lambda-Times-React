@@ -1,16 +1,42 @@
-import React from 'react';
-import Tab from './Tab';
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+const PropTypes = require('prop-types')
+const uuidv1 = require('uuid/v1')
+const Tab = require('./Tab')
+const styles = require('./styles/index')
+
+/**
+ * Define component
+ */
+
 const Tabs = props => {
   return (
-    <div className="tabs">
-      <div className="topics">
-        <span className="title">TRENDING TOPICS:</span>
-        {/* map over the tabs provided on your props, create a new Tab component for each one.
-            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
-      </div>
-    </div>
-  );
-};
+    <styles.TabsStyle>
+      <styles.TabsTopicsStyle>
+        <styles.TabsTopcsTitleStyle>TRENDING TOPICS:</styles.TabsTopcsTitleStyle>
+        {props.tabs.map(tab => <Tab key={uuidv1()} tab={tab} selectedTab={props.selectedTab} selectTabHandler={props.selectTabHandler} />)}
+      </styles.TabsTopicsStyle>
+    </styles.TabsStyle>
+  )
+}
 
-// Make sure to use PropTypes to validate your types!
-export default Tabs;
+/**
+ * Validate prop types
+ */
+
+Tabs.propTypes = {
+  tabs: PropTypes.array.isRequired,
+  selectedTab: PropTypes.string.isRequired,
+  selectTabHandler: PropTypes.func.isRequired,
+}
+
+/**
+ * Export component
+ */
+
+module.exports = Tabs
