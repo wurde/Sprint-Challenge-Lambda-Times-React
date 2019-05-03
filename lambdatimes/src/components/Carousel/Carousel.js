@@ -20,13 +20,14 @@ const carouselData = data.carouselData
  */
 
 class Carousel extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
-
+      slides: carouselData
     }
   }
-  componentDidMount(){
+
+  componentDidMount() {
 
   }
 
@@ -42,12 +43,12 @@ class Carousel extends Component {
     return <img src={} style={{display: 'block'}} />
   }
 
-  render(){
+  render() {
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
+      <styles.CarouselStyle>
+        <styles.CarouselLeftButtonStyle onClick={this.leftClick}>{"<"}</styles.CarouselLeftButtonStyle>
+        <styles.CarouselRightButtonStyle onClick={this.rightClick}>{">"}</styles.CarouselRightButtonStyle>
+      </styles.CarouselStyle>
     )
   }
 }
